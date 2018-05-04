@@ -1,0 +1,24 @@
+{
+  "name": "react-native-sf-aliyun-oss",
+  "version": "1.0.2",
+  "description": "阿里云oss上传",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DLSoftFun/react-native-sf-aliyun-oss.git"
+  },
+  "keywords": [
+    "aliyun",
+    "oss",
+    "upload"
+  ],
+  "author": "suifeng586",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DLSoftFun/react-native-sf-aliyun-oss.git/issues"
+  },
+  "homepage": "https://github.com/DLSoftFun/react-native-sf-aliyun-oss#readme"
+}
