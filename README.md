@@ -34,10 +34,9 @@ SFAliyunOss.config(config)
 //文件上传
 SFAliyunOss.upload('阿里云文件目录','上传文件的地址','文件后缀名',(progress)=>{},(fileKey)=>{},(err)=>{})
 //多文件上传
-SFAliyunOss.upload('阿里云文件目录',[{filePath:'',ext:'png'},{filePath:'',ext:'png'}],(progress)=>{},(fileKeys)=>{},(err)=>{})
+SFAliyunOss.uploadMulti('阿里云文件目录',[{filePath:'',ext:'png'},{filePath:'',ext:'png'}],(progress)=>{},(fileKeys)=>{},(err)=>{})
 //文件下载
 SFAliyunOss.downLoad('阿里云文件地址',(progress)=>{},(filePath)=>{},(err)=>{})
 
 ```
-
 
