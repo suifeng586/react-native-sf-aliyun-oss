@@ -46,7 +46,11 @@ RCT_EXPORT_METHOD(initWithKey:(NSString *)accessKey
   [[SFAliyunOss share] initWithKey:accessKey secretKey:secretKey securityToken:securityToken endpoint:endpoint bucketName:bucketName];
    
 }
-
+RCT_EXPORT_METHOD(setImageMaxSize:(int)size)
+{
+  //单位kb
+  [[SFAliyunOss share] setImageMaxSize:size];
+}
 
 RCT_REMAP_METHOD(download,tag:(NSString*)tag ossFile:(NSString *)ossFile fileExt:(NSString *)fileExt expireTime:(NSInteger)expireTime resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
   [[SFAliyunOss share] download:ossFile fileExt:fileExt expireTime:expireTime progressBlock:^(int64_t bytes, int64_t totalByte, int64_t totalBytesExpected) {

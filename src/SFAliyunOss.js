@@ -18,6 +18,9 @@ const SFAliyunOss = {
     config(accessKey, secretKey, endPoint, bucketName) {
         oss.initWithKey(accessKey, secretKey, '', endPoint, bucketName);
     },
+    setImgSize(maxSize){//单位kb
+        oss.setImageMaxSize(maxSize);
+    },
     upload(folder, filePath, progress, suc, fail) {
         filePath = filePath.replace('file://', '');
         let fileName = this._getFileName(this._getFileExt(filePath));

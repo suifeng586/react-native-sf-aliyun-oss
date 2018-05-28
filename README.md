@@ -20,6 +20,7 @@
 |uploadMulCompress|folder,filePaths,progress,suc,fail|string/array/func/func/func|上传多个文件，带压缩|参考例子|
 |uploadMulCompressExt|folder,filePaths,fileExts,progress,suc,fail|string/array,array/func/func/func|上传多个文件，带压缩，链接不带文件后缀的需要调用此函数|参考例子|
 |downLoad|tag,filePath,expireTime,progress,suc,fail|string/string/int/func/func/func|下载文件|参考例子|
+|setImgSize|maxSize|number|设置压缩图片时，图片的最大质量，但不是绝对的，只是相对接近（单位kb）||
 
 
 # 例子
