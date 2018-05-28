@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90B0ADBA20BB9DB200015B60 /* SFAliyunOssBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B0ADA320BB9DB200015B60 /* SFAliyunOssBridge.m */; };
+		90B0ADBB20BB9DB200015B60 /* SFAliyunOss.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B0ADA520BB9DB200015B60 /* SFAliyunOss.m */; };
+		90B0ADBC20BB9DB200015B60 /* AliyunOSSiOS in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B0ADB520BB9DB200015B60 /* AliyunOSSiOS */; };
+		90B0ADBD20BB9DB200015B60 /* SFAliyunOssFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 90B0ADB920BB9DB200015B60 /* SFAliyunOssFileCache.m */; };
+		90B0ADC020BB9DCA00015B60 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90B0ADBF20BB9DC900015B60 /* libresolv.9.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90B0AD9420BB9D1100015B60 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		90B0AD9620BB9D1100015B60 /* libSFAliyunOss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSFAliyunOss.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B0ADA220BB9DB200015B60 /* SFAliyunOssFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAliyunOssFileCache.h; sourceTree = "<group>"; };
+		90B0ADA320BB9DB200015B60 /* SFAliyunOssBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAliyunOssBridge.m; sourceTree = "<group>"; };
+		90B0ADA420BB9DB200015B60 /* SFAliyunOssBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAliyunOssBridge.h; sourceTree = "<group>"; };
+		90B0ADA520BB9DB200015B60 /* SFAliyunOss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAliyunOss.m; sourceTree = "<group>"; };
+		90B0ADA720BB9DB200015B60 /* OSSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSModel.h; sourceTree = "<group>"; };
+		90B0ADA820BB9DB200015B60 /* OSSCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSCompat.h; sourceTree = "<group>"; };
+		90B0ADA920BB9DB200015B60 /* OSSCancellationTokenSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSCancellationTokenSource.h; sourceTree = "<group>"; };
+		90B0ADAA20BB9DB200015B60 /* OSSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSUtil.h; sourceTree = "<group>"; };
+		90B0ADAB20BB9DB200015B60 /* OSSXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSXMLDictionary.h; sourceTree = "<group>"; };
+		90B0ADAC20BB9DB200015B60 /* OSSExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSExecutor.h; sourceTree = "<group>"; };
+		90B0ADAD20BB9DB200015B60 /* OSSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSClient.h; sourceTree = "<group>"; };
+		90B0ADAE20BB9DB200015B60 /* OSSCancellationTokenRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSCancellationTokenRegistration.h; sourceTree = "<group>"; };
+		90B0ADAF20BB9DB200015B60 /* OSSNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSNetworking.h; sourceTree = "<group>"; };
+		90B0ADB020BB9DB200015B60 /* OSSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSDefine.h; sourceTree = "<group>"; };
+		90B0ADB120BB9DB200015B60 /* OSSBolts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSBolts.h; sourceTree = "<group>"; };
+		90B0ADB220BB9DB200015B60 /* OSSTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSTask.h; sourceTree = "<group>"; };
+		90B0ADB320BB9DB200015B60 /* OSSTaskCompletionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSTaskCompletionSource.h; sourceTree = "<group>"; };
+		90B0ADB420BB9DB200015B60 /* OSSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSLog.h; sourceTree = "<group>"; };
+		90B0ADB520BB9DB200015B60 /* AliyunOSSiOS */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = AliyunOSSiOS; sourceTree = "<group>"; };
+		90B0ADB620BB9DB200015B60 /* OSSCancellationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSCancellationToken.h; sourceTree = "<group>"; };
+		90B0ADB720BB9DB200015B60 /* OSSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSSService.h; sourceTree = "<group>"; };
+		90B0ADB820BB9DB200015B60 /* SFAliyunOss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAliyunOss.h; sourceTree = "<group>"; };
+		90B0ADB920BB9DB200015B60 /* SFAliyunOssFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAliyunOssFileCache.m; sourceTree = "<group>"; };
+		90B0ADBF20BB9DC900015B60 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90B0AD9320BB9D1100015B60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B0ADC020BB9DCA00015B60 /* libresolv.9.tbd in Frameworks */,
+				90B0ADBC20BB9DB200015B60 /* AliyunOSSiOS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90B0AD8D20BB9D1100015B60 = {
+			isa = PBXGroup;
+			children = (
+				90B0AD9820BB9D1100015B60 /* SFAliyunOss */,
+				90B0AD9720BB9D1100015B60 /* Products */,
+				90B0ADBE20BB9DC900015B60 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		90B0AD9720BB9D1100015B60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90B0AD9620BB9D1100015B60 /* libSFAliyunOss.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90B0AD9820BB9D1100015B60 /* SFAliyunOss */ = {
+			isa = PBXGroup;
+			children = (
+				90B0ADA620BB9DB200015B60 /* AliyunOSSSDK */,
+				90B0ADB820BB9DB200015B60 /* SFAliyunOss.h */,
+				90B0ADA520BB9DB200015B60 /* SFAliyunOss.m */,
+				90B0ADA420BB9DB200015B60 /* SFAliyunOssBridge.h */,
+				90B0ADA320BB9DB200015B60 /* SFAliyunOssBridge.m */,
+				90B0ADA220BB9DB200015B60 /* SFAliyunOssFileCache.h */,
+				90B0ADB920BB9DB200015B60 /* SFAliyunOssFileCache.m */,
+			);
+			path = SFAliyunOss;
+			sourceTree = "<group>";
+		};
+		90B0ADA620BB9DB200015B60 /* AliyunOSSSDK */ = {
+			isa = PBXGroup;
+			children = (
+				90B0ADA720BB9DB200015B60 /* OSSModel.h */,
+				90B0ADA820BB9DB200015B60 /* OSSCompat.h */,
+				90B0ADA920BB9DB200015B60 /* OSSCancellationTokenSource.h */,
+				90B0ADAA20BB9DB200015B60 /* OSSUtil.h */,
+				90B0ADAB20BB9DB200015B60 /* OSSXMLDictionary.h */,
+				90B0ADAC20BB9DB200015B60 /* OSSExecutor.h */,
+				90B0ADAD20BB9DB200015B60 /* OSSClient.h */,
+				90B0ADAE20BB9DB200015B60 /* OSSCancellationTokenRegistration.h */,
+				90B0ADAF20BB9DB200015B60 /* OSSNetworking.h */,
+				90B0ADB020BB9DB200015B60 /* OSSDefine.h */,
+				90B0ADB120BB9DB200015B60 /* OSSBolts.h */,
+				90B0ADB220BB9DB200015B60 /* OSSTask.h */,
+				90B0ADB320BB9DB200015B60 /* OSSTaskCompletionSource.h */,
+				90B0ADB420BB9DB200015B60 /* OSSLog.h */,
+				90B0ADB520BB9DB200015B60 /* AliyunOSSiOS */,
+				90B0ADB620BB9DB200015B60 /* OSSCancellationToken.h */,
+				90B0ADB720BB9DB200015B60 /* OSSService.h */,
+			);
+			path = AliyunOSSSDK;
+			sourceTree = "<group>";
+		};
+		90B0ADBE20BB9DC900015B60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90B0ADBF20BB9DC900015B60 /* libresolv.9.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90B0AD9520BB9D1100015B60 /* SFAliyunOss */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90B0AD9F20BB9D1100015B60 /* Build configuration list for PBXNativeTarget "SFAliyunOss" */;
+			buildPhases = (
+				90B0AD9220BB9D1100015B60 /* Sources */,
+				90B0AD9320BB9D1100015B60 /* Frameworks */,
+				90B0AD9420BB9D1100015B60 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFAliyunOss;
+			productName = SFAliyunOss;
+			productReference = 90B0AD9620BB9D1100015B60 /* libSFAliyunOss.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90B0AD8E20BB9D1100015B60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = zq;
+				TargetAttributes = {
+					90B0AD9520BB9D1100015B60 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 90B0AD9120BB9D1100015B60 /* Build configuration list for PBXProject "SFAliyunOss" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 90B0AD8D20BB9D1100015B60;
+			productRefGroup = 90B0AD9720BB9D1100015B60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90B0AD9520BB9D1100015B60 /* SFAliyunOss */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90B0AD9220BB9D1100015B60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B0ADBB20BB9DB200015B60 /* SFAliyunOss.m in Sources */,
+				90B0ADBD20BB9DB200015B60 /* SFAliyunOssFileCache.m in Sources */,
+				90B0ADBA20BB9DB200015B60 /* SFAliyunOssBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		90B0AD9D20BB9D1100015B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		90B0AD9E20BB9D1100015B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90B0ADA020BB9D1100015B60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZXZC7G4VLE;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SFAliyunOss/AliyunOSSSDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90B0ADA120BB9D1100015B60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZXZC7G4VLE;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SFAliyunOss/AliyunOSSSDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90B0AD9120BB9D1100015B60 /* Build configuration list for PBXProject "SFAliyunOss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B0AD9D20BB9D1100015B60 /* Debug */,
+				90B0AD9E20BB9D1100015B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90B0AD9F20BB9D1100015B60 /* Build configuration list for PBXNativeTarget "SFAliyunOss" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B0ADA020BB9D1100015B60 /* Debug */,
+				90B0ADA120BB9D1100015B60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90B0AD8E20BB9D1100015B60 /* Project object */;
+}
