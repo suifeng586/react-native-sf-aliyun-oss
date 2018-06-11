@@ -22,7 +22,7 @@ typedef NS_OPTIONS(NSInteger, FileType) {
 
 @property (nonatomic,strong) SFAliyunOssFileCache *cache;
 
-+(id)share;
++(SFAliyunOss *)share;
 //oss初始化
 -(void)initWithKey:(NSString *)accessKey secretKey:(NSString *)secretKey securityToken:(NSString *)securityToken endpoint:(NSString *)endpoint bucketName:(NSString *)bucketName;
 
@@ -45,4 +45,5 @@ typedef NS_OPTIONS(NSInteger, FileType) {
 -(void)download:(NSString*)fileKey fileExt:(NSString *)fileExt expireTime:(int)expireTime progressBlock:(progressBlock)progressBlock sucessBlock:(sucessBlock)sucessBlock failBlock:(failBlock)failBlock;
 
 -(void)setImageMaxSize:(int)size;
+-(void)deleteFile:(NSString *)filePath sucessBlock:(sucessBlock)sucessBlock;
 @end

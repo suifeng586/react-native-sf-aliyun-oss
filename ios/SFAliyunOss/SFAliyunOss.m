@@ -18,7 +18,7 @@ static SFAliyunOss *_aliyun_oss;
   NSMutableArray *_fileKeys;
   NSInteger _imgMaxSize;
 }
-+(id)share{
++(SFAliyunOss *)share{
   if (!_aliyun_oss){
     _aliyun_oss = [SFAliyunOss new];
   }
@@ -280,5 +280,11 @@ static SFAliyunOss *_aliyun_oss;
     }
     return nil;
   }];
+}
+-(void)deleteFile:(NSString *)filePath sucessBlock:(sucessBlock)sucessBlock{
+  [[NSFileManager defaultManager] removeItemAtPath:filePath error:nil];
+  if (sucessBlock){
+    sucessBlock(filePath);
+  }
 }
 @end

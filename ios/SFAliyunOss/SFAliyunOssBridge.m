@@ -52,7 +52,20 @@ RCT_EXPORT_METHOD(setImageMaxSize:(int)size)
   [[SFAliyunOss share] setImageMaxSize:size];
 }
 
-RCT_REMAP_METHOD(download,tag:(NSString*)tag ossFile:(NSString *)ossFile fileExt:(NSString *)fileExt expireTime:(NSInteger)expireTime resolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
+RCT_EXPORT_METHOD(deleteFile:(NSString*)filePath callback:(RCTResponseSenderBlock)callback) {
+  
+  [[SFAliyunOss share] deleteFile:filePath sucessBlock:^(NSString *fileKey) {
+    callback(@[[NSNull null],fileKey]);
+  }];
+}
+RCT_REMAP_METHOD(download,
+                 tag:(NSString*)tag
+                 ossFile:(NSString *)ossFile
+                 fileExt:(NSString *)fileExt
+                 expireTime:(NSInteger)expireTime
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject) {
+  
   [[SFAliyunOss share] download:ossFile fileExt:fileExt expireTime:expireTime progressBlock:^(int64_t bytes, int64_t totalByte, int64_t totalBytesExpected) {
     float progress = ((float)totalByte)/totalBytesExpected;
     [self sendDownloadProgress:tag bytes:bytes totalByte:totalByte totalBytesExpected:totalBytesExpected progress:progress];
@@ -125,6 +138,43 @@ RCT_REMAP_METHOD(uploadMulCompress,
   } failMulBlock:^(NSError *error) {
     reject(@"-1", [error description], nil);
   }];
+}
+
+RCT_EXPORT_METHOD(clearExpireFileCache:(RCTResponseSenderBlock)callback)
+{
+  //单位kb
+  [[SFAliyunOss share].cache clearExpireFileCache];
+  callback(@[[NSNull null]]);
+}
+RCT_EXPORT_METHOD(clearAllCache:(RCTResponseSenderBlock)callback)
+{
+  //单位kb
+  [[SFAliyunOss share].cache clearAllCache];
+  callback(@[[NSNull null]]);
+}
+RCT_EXPORT_METHOD(getCacheSizeAll:(RCTResponseSenderBlock)callback)
+{
+  //单位kb
+  unsigned long long size = [[SFAliyunOss share].cache getCacheSizeAll];
+  callback(@[[NSNull null],[NSString stringWithFormat:@"%lld",size]]);
+}
+RCT_EXPORT_METHOD(getTotalMemorySize:(RCTResponseSenderBlock)callback)
+{
+  //单位kb
+  unsigned long long size = [[SFAliyunOss share].cache getTotalMemorySize];
+  callback(@[[NSNull null],[NSString stringWithFormat:@"%lld",size]]);
+}
+RCT_EXPORT_METHOD(getCacheSizeTmp:(RCTResponseSenderBlock)callback)
+{
+  //单位kb
+  unsigned long long size = [[SFAliyunOss share].cache getCacheSizeTmp];
+  callback(@[[NSNull null],[NSString stringWithFormat:@"%lld",size]]);
+}
+RCT_EXPORT_METHOD(getCacheSizeByPath:(NSString*)path callback:(RCTResponseSenderBlock)callback)
+{
+  //单位kb
+  unsigned long long size = [[SFAliyunOss share].cache getCacheSizeByPath:path];
+  callback(@[[NSNull null],[NSString stringWithFormat:@"%lld",size]]);
 }
 
 @end

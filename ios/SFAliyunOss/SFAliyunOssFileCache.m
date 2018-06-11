@@ -7,13 +7,14 @@
 //
 
 #import "SFAliyunOssFileCache.h"
-
+#include <sys/param.h>
+#include <sys/mount.h>
 #define FOLDER_OSS @"SF_OSS_FILES"
 static SFAliyunOssFileCache *_oss_file_cache;
 @implementation SFAliyunOssFileCache{
   NSString *_fileFloader;
 }
-+(id)share{
++(SFAliyunOssFileCache*)share{
   if (!_oss_file_cache){
     _oss_file_cache = [SFAliyunOssFileCache new];
   }
@@ -32,7 +33,19 @@ static SFAliyunOssFileCache *_oss_file_cache;
     NSLog(@"SFAliyunOssCache:%@",name);
   }
 }
-- (int)getCacheSizeAll{
+- (unsigned long long)getCacheSizeByPath:(NSString *)filePath{
+  return [self fileSize:filePath];
+}
+- (unsigned long long)getTotalMemorySize{
+  struct statfs buf;
+  unsigned long long freeSpace = -1;
+  if (statfs("/var", &buf) >= 0) {
+    freeSpace = (unsigned long long)(buf.f_bsize * buf.f_bavail);
+  }
+  return freeSpace;
+  
+}
+- (unsigned long long)getCacheSizeAll{
   NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:_fileFloader error:nil];
   int size = 0;
   for (NSString *name in files) {
@@ -40,7 +53,7 @@ static SFAliyunOssFileCache *_oss_file_cache;
   }
   return size;
 }
-- (int)getCacheSizeTmp{
+- (unsigned long long)getCacheSizeTmp{
   NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:_fileFloader error:nil];
   int size = 0;
   for (NSString *name in files) {

@@ -19,10 +19,94 @@ const SFAliyunOss = {
         oss.initWithKey(accessKey, secretKey, '', endPoint, bucketName);
     },
     setImgSize(maxSize){//单位kb
-        oss.setImageMaxSize(maxSize);
+        if (Platform.OS == 'ios'){
+            oss.setImageMaxSize(maxSize);
+        }
+    },
+
+    deleteFile(filePath,callBack){
+        if (Platform.OS == 'ios') {
+            oss.deleteFile(filePath,(err,filePath)=>{
+                callBack(filePath);
+            })
+        }else{
+            oss.deleteFile(filePath).then((filePath)=> {
+                callBack(filePath);
+            }).catch((e) => {
+
+            });
+        }
+    },
+
+    clearExpireFileCache(callBack){
+        if (Platform.OS == 'ios'){
+            oss.clearExpireFileCache((err)=>{
+                callBack();
+            })
+        }else{
+            oss.clearExpireFileCache().then((err)=>{
+                callBack();
+            })
+        }
+    },
+    clearAllCache(callBack){
+        if (Platform.OS == 'ios'){
+            oss.clearAllCache((err)=>{
+                callBack();
+            })
+        }else{
+            oss.clearAllCache.then((err)=>{
+                callBack();
+            })
+        }
+    },
+    getCacheSizeAll(callBack){
+        if (Platform.OS == 'ios'){
+            oss.getCacheSizeAll((err,size)=>{
+                callBack(size);
+            })
+        }else{
+            oss.getCacheSizeAll().then((ret)=>{
+                callBack(ret);
+            })
+        }
+    },
+    getCacheSizeByPath(path,callBack){
+        if (Platform.OS == 'ios'){
+            oss.getCacheSizeByPath(path,(err,size)=>{
+                callBack(size);
+            })
+        }else{
+            oss.getCacheSizeByPath(path).then((ret)=>{
+                callBack(ret);
+            }).catch(()=>{
+                callBack(0);
+            })
+        }
+    },
+    getTotalMemorySize(callBack){
+        if (Platform.OS == 'ios'){
+            oss.getTotalMemorySize((err,size)=>{
+                callBack(size);
+            })
+        }else{
+            oss.getTotalMemorySize().then((ret)=>{
+                callBack(ret);
+            })
+        }
+    },
+    getCacheSizeTmp(callBack){
+        if (Platform.OS == 'ios'){
+            oss.getCacheSizeTmp((err,size)=>{
+                callBack(size);
+            })
+        }else{
+            oss.getCacheSizeTmp().then((ret)=>{
+                callBack(ret);
+            })
+        }
     },
     upload(folder, filePath, progress, suc, fail) {
-        filePath = filePath.replace('file://', '');
         let fileName = this._getFileName(this._getFileExt(filePath));
         const uploadProgress = (p) => {
             if (progress) {
@@ -43,7 +127,6 @@ const SFAliyunOss = {
     uploadMul(folder, filePaths, progress, suc,fail) {
         let fileNames = [];
         for (let i = 0; i < filePaths.length; i++) {
-            filePaths[i] = filePaths[i].replace('file://', '');
             fileNames.push(folder + '/' + this._getFileName(this._getFileExt(filePaths[i])));
         }
         const uploadProgress = (p) => {
@@ -67,7 +150,6 @@ const SFAliyunOss = {
         this.uploadCompressExt(folder,filePath,ext,progress,suc,fail);
     },
     uploadCompressExt(folder, filePath, fileExt, progress, suc, fail) {
-        filePath = filePath.replace('file://', '');
         let ext = fileExt;
         let type = this._getFileTypeByExt(ext);
         if (type === -1){
@@ -126,6 +208,28 @@ const SFAliyunOss = {
             }
         });
     },
+    downloadBySendProgress(tag,ossFile,expireTime, suc,fail){
+        let fileExt = this._getFileExt(ossFile);
+
+        oss.download(tag+'',ossFile,fileExt,expireTime).then((filePath) => {
+            suc(filePath);
+        }).catch((e) => {
+            if (fail) {
+                fail(e);
+            }
+        })
+    },
+    downloadBySendProgressAndExt(tag,ossFile,expireTime,ext, suc,fail){
+        let fileExt = ext;
+
+        oss.download(tag+'',ossFile,fileExt,expireTime).then((filePath) => {
+            suc(filePath);
+        }).catch((e) => {
+            if (fail) {
+                fail(e);
+            }
+        })
+    },
     download(tag,ossFile,expireTime,progress, suc,fail) {
         let fileExt = this._getFileExt(ossFile);
         const downloadProgress = (p) => {
@@ -163,9 +267,13 @@ const SFAliyunOss = {
     },
     _getFileExt(filepath) {
         if (filepath !== "") {
+            if (filepath.indexOf(".") == -1){
+                return '';
+            }
             let pos = filepath.replace(/.+\./, "");
             return pos;
         }
+        return '';
     },
     _addListener(type, handler) {
         let listener;

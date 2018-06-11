@@ -1,6 +1,6 @@
 {
   "name": "react-native-sf-aliyun-oss",
-  "version": "1.0.4",
+  "version": "1.1.2",
   "description": "阿里云oss上传",
   "main": "index.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/DLSoftFun/react-native-sf-aliyun-oss.git/issues"
   },
-  "homepage": "https://github.com/DLSoftFun/react-native-sf-aliyun-oss#readme"
+  "homepage": "https://github.com/DLSoftFun/react-native-sf-aliyun-oss#readme",
+  "dependencies": {
+    "react-native-sf-ums": "^1.0.2"
+  }
 }
