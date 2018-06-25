@@ -9,6 +9,13 @@
 * react-native link react-native-sf-aliyun-oss
 
 
+# ios
+引用库
+libresolv.tbd
+CoreTelephony.framework
+SystemConfiguration.framework
+
+
 # Methods
 |  Methods  |  Params  |  Param Types  |   description  |  Example  |
 |:-----|:-----|:-----|:-----|:-----|
